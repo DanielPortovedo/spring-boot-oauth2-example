@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>User Details</title>
+</head>
+<body>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Key</th>
+        <th>Value</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="instance : ${userInfo}">
+        <td th:text="${instance.key}">keyvalue</td>
+        <td th:text="${instance.value}">num</td>
+    </tr>
+    </tbody>
+</table>
+
+<a href="/">Back</a>
+</body>
+</html>

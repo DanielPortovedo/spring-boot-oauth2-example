@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>SSO Application</title>
+</head>
+<body>
+<h1>Home</h1>
+<a th:if="${authenticated == null || !authenticated}" href="/login">Login</a>
+<span th:if="${authenticated}">
+    <a href="/userinfo">User Details</a>
+    <a href="/access-token">Token</a>
+    <a href="/logout">Logout</a>
+</span>
+</body>
+</html>

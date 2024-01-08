@@ -1,0 +1,25 @@
+logging:
+  level:
+    org.springframework.web.client.RestTemplate: DEBUG
+server.port: 8080
+spring:
+  security:
+    oauth2:
+      client:
+        provider:
+          cern:
+            issuer-uri: https://auth.cern.ch/auth/realms/cern
+        registration:
+          cern:
+            client-id: <client-id>
+            client-secret: <client-secret>
+            scope: openid
+  profiles:
+    active: dev
+server:
+  error:
+    whitelabel:
+      enabled: false
+  tomcat:
+    max-http-response-header-size: 48000
+  max-http-request-header-size: 48000
